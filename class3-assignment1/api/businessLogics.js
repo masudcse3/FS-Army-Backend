@@ -53,8 +53,9 @@ const fakeProfile = (arr) => {
   }, {});
 };
 /**
- *
+ * accept a string and returns the number of lettrs, number of numeric and number of symbols
  * @param {string} str
+ * @returns {object} result
  */
 const countCharecters = (str) => {
   let result = {
