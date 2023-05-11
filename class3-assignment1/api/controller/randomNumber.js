@@ -1,5 +1,5 @@
 /** @format */
-const randomNumber = require("../businessLogics");
+const { randomNumber } = require("../businessLogics");
 const randomNumberController = (req, res) => {
   let { start, end } = req.query;
   start = parseInt(start);
