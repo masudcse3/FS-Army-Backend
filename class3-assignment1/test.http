@@ -1,1 +1,6 @@
 GET http://localhost:4000/api/v1/random-number?start=10&end=20
+###
+GET http://localhost:4000/api/v1/fake-address?properties=firstName,lastName
+
+###
+http://localhost:4000/api/v1/count-charecters?text=masud,,,,...rana!123!

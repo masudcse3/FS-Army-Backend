@@ -2,10 +2,10 @@
 
 const { faker } = require("@faker-js/faker");
 /**
- * @format
- * @param {number} start
- * @param {number} end
- * @return {number} random number
+ * generate a random integer number from a given range
+ * @param {number} start accept an integer
+ * @param {number} end accept an integer
+ * @return {number} a random integer number
  */
 
 const randomNumber = (start, end) => {
@@ -52,5 +52,27 @@ const fakeProfile = (arr) => {
     }
   }, {});
 };
+/**
+ *
+ * @param {string} str
+ */
+const countCharecters = (str) => {
+  let result = {
+    letter: 0,
+    number: 0,
+    symbol: 0,
+  };
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (/[a-zA-z]/.test(char)) {
+      result.letter++;
+    } else if (/[0-9]/.test(char)) {
+      result.number++;
+    } else {
+      result.symbol++;
+    }
+  }
+  return result;
+};
 
-module.exports = { randomNumber, fakeProfile };
+module.exports = { randomNumber, fakeProfile, countCharecters };
